@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<!-- string function in JS
+    21.7.22 -->
+
+<script>
+    var a = "hello , this is CHITRESH"
+
+    console.log(a)        // this will print string a 
+
+    console.log(a[2])         // this will show the char which is at index 2 in string a 
+
+
+    var b = a.indexOf('is')       //    this will return the starting index of first occurence of substring 
+
+    console.log(b)
+    var b = a.indexOf('is', 11)    //    this will search for 'is ' after index 11 
+
+    b = a.lastIndexOf('is')       //    this will return the starting index of last occurencnce of substring 
+
+    console.log(b)
+
+
+    console.log(a.slice(1, 4))    //    this will show the chars from index from 1 to 3
+
+
+    console.log(a.substring(1, 4))    // its output is same as slice()
+
+
+    // the only difference between substring() and slice() is that slice() can take negative parameters as  well 
+
+    console.log(a.slice(-1));    // this will show the char of last index 
+
+
+    console.log(a.substr(0, 5))    // in substr() the first parameter is the  index and another parameter is the size of substring to be extracted 
+
+
+    console.log(a.replace("chitresh", "harsh"))    // this will replace chitresh from harsh
+
+
+    console.log(a.toLowerCase())    // convert into lowecase 
+
+
+    console.log(a.toUpperCase())    // converto into upper case
+
+
+    console.log(a.concat(" and cm"))    // this will merge or add a substring at the end of parent string
+
+
+    var c = "   welcome    home   "
+    console.log(c.trim())    // this will remove the white spaces from the starting and from ending of a string 
+
+    console.log(a.charAt(1))    // this will return the char which is at index 1
+
+
+    console.log(a.charCodeAt(0))    // this will return ascii code of desired character , it takes index as parameter 
+
+
+</script>
+
+</html>
