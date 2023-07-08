@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<!-- DOM (DOCUMENT OBJECT MODEL  ) navigation 
+24.7.22 -->
+<body>
+
+
+    <div class="outer">
+        <div class="inner">
+            this is box
+        </div>
+    </div>
+
+    <div class="outer">
+        this is another box
+    </div>
+
+    <ul id="hello">
+        <li>element-1</li>
+        <li>element-2</li>
+        <li>element-3</li>
+        <li>element-4</li>
+        <li>element-5</li>
+    </ul>
+    <ul class="hello">
+        <li>element-1</li>
+        <li>element-2</li>
+        <li>element-3</li>
+        <li>element-4</li>
+        <li>element-5</li>
+    </ul>
+    <script>
+        let hello2 = document.getElementById('hello')
+        console.log(hello2)
+
+        let outer2 = document.getElementsByClassName('outer')
+        console.log(outer2)
+
+        let psuedo=document.querySelector('#hello ')
+        console.log(psuedo)
+
+        let child= document.querySelector(' .inner')
+        console.log(child)
+
+    //    child.innerHTML  --> using this we can view and change the css in console 
+            
+            </script>
+    </body >
+</html >
