@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<!-- performing the task using the fucntions  -->
+<!-- 28.7.22 -->
+
+
+<style>
+    #alpha {
+        transition: all 2s;
+
+    }
+
+    #another {
+        display: none;
+    }
+</style>
+
+<body>
+    <p id="alpha">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, dolorum qui hic et ipsam
+        reprehenderit nulla doloremque deserunt nostrum molestias.
+
+    </p>
+    <button onclick="hideUnhide()">
+        <!-- this will call hideUnhide( ) function -->
+
+        click
+    </button>
+
+
+    <p id="another">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quam culpa maiores laudantium saepe quaerat quos
+        dolore quis ab qui.
+    </p>
+    <button onclick="show() ">show</button>
+    <!-- this will call the show function  -->
+
+</body>
+
+<script>
+    let a = document.getElementById('alpha');
+
+    var tax = document.getElementById('another');
+
+    function hideUnhide() {
+        // performing operations on variable a which is originally para element 
+        if (a.style.display != 'none') {
+
+            a.style.display = 'none';
+        }
+        else {
+            a.style.display = 'block';
+            a.style.color = 'red';
+            a.style.border = '2px solid red'
+            a.style.fontSize = '5vw'
+            a.style.padding = '3vw'
+
+        }
+    }
+    function show() {
+        if (tax.style.display == 'none') {
+            tax.style.display = 'block';
+        }
+        else {
+            tax.style.display = 'none'
+        }
+    }
+
+
+</script>
+
+</html>
