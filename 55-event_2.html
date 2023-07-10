@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<!-- demonstrating the event handling in jaavascript -->
+<!-- 28.7.22 -->
+
+    <style>
+             
+    </style>
+    <body>
+        <h1> events in js</h1>
+   
+        <p onclick="clicked(this)"> click on me </p>
+        <!-- onclick will call clicked() function when we click on it  -->
+
+        <h2  onclick="show(this)"><!-- 'this' is a parameter which passes its host virtual id -->
+            click here to see date 
+        </h2>
+
+        <button onclick="show2()"> date using different method </button>
+        <h1 id="hola"> </h1>
+
+        <form action="">
+           enter your name:  <input id="forms" onchange="change(this)" type="text" >
+           <!-- onchange will call change() as soon as we click at any other  -->
+        </form>
+        <p> above will convert your name into uppercase </p>
+    </body>
+    <script>
+
+        function clicked(id){
+            id.innerHTML="thank you for clicking ";
+        }
+
+        function show(a){
+            a.innerHTML=Date();
+        }
+
+        function show2 (){
+            document.getElementById("hola").innerHTML=Date();
+        }
+
+        function change(a){
+            var a= document.getElementById('forms')
+            a.value=a.value.toUpperCase();
+        }
+
+    </script>
+</html>
