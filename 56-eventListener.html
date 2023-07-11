@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<!-- DIFFERENT TYPES ACTION LISTENERS IN JS 
+28.7.22 -->
+
+<!-- in event listening we use onclick , onmouseover -->
+<!-- but in addaeventlistener we dont have to use 'on' prefix , we simply define it by writing click , mouseover, mouseleave etc; -->
+
+<html>
+<style>
+    #para5 {
+        display: none;
+    }
+
+    #diana {
+        display: none;
+    }
+
+    div{
+        border: 2px solid ;
+        padding:20px;
+        margin:20px;
+
+    }
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    </style>
+
+<body id="boss">
+    
+    
+    <h1>event listeners in javascript</h1>
+
+    <div id="diana">
+        <h2> this reprsent wheel event , this is also an example of anonymous class </h2>
+        this block is activated because you rotate your mouse wheel
+    </div>
+
+    
+    <div>
+
+        <h2>this button is resposible for click event , just click it </h2>
+        <button id="meth"> button-1</button>
+        <p id="para1"></p>
+    </div>
+
+    
+    <div>
+        <h2>this is the exaple of double click event </h2>
+        <button id="meth2">button-2</button>
+        <p id="para2"></p>
+    </div>
+
+    
+    <div>
+        <h2>this is the example of mouseover event , just hover cursor over it </h2>
+        <button id="meth3">button-3</button>
+        <p id="para3"></p>
+    </div>
+
+    
+    <div>
+        <h2>this represents multiple events in just one element </h2>
+        <h3>mouseleave , click , mouseover</h3>
+        <button id="meth4">button-3</button>
+
+        <para id="para5">
+            you succcesflly launched pointerleave event
+        </para>
+    </div>
+
+
+
+
+
+    <script>
+        document.getElementById("meth").addEventListener("click", func1);
+
+
+        function func1() {
+            document.getElementById("para1").innerHTML = Date();
+            console.log("called")
+        }
+
+        document.getElementById("meth2").addEventListener("dblclick", func2);
+
+        function func2() {
+
+            document.getElementById("para2").innerHTML = "you successfully double clicked"
+        }
+
+        document.getElementById("meth3").addEventListener("mouseover", func3);
+
+        function func3() {
+            a = document.getElementById("para3").innerHTML += "mouse in<br>"
+
+
+        };
+
+        var cm = document.getElementById('meth4')
+        cm.addEventListener("mouseleave", func4);
+        cm.addEventListener("click", func5);
+        cm.addEventListener("mouseover", func6);
+
+        function func4() {
+            cm.innerHTML = "mouse out<br>"
+        }
+
+        function func5() {
+            document.getElementById("para5").style.display = 'block'
+        }
+
+        function func6() {
+            document.getElementById("boss").style.backgroundColor = "pink"
+        }
+
+        document.getElementById("boss").addEventListener("wheel", function () {
+
+            var c = document.getElementById("diana");
+            c.style.display = 'block'
+            c.style.border = "2px solid red"
+          
+
+
+        })
+
+    </script>
+</body>
+
+</html>
